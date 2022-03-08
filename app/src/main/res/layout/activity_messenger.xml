@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".messenger.MessengerActivity">
+
+    <TextView
+        android:id="@+id/tv_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="客户端:"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_client_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送消息："
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_client" />
+
+    <EditText
+        android:id="@+id/edt_client_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_client_send"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_client_send" />
+
+    <TextView
+        android:id="@+id/tv_client_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="接收消息："
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_client_send" />
+
+    <EditText
+        android:id="@+id/edt_client_receive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_client_send"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_client_receive" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_margin="10dp"
+        android:text="发送消息"
+        app:layout_constraintTop_toBottomOf="@id/edt_client_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="远程服务端:"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_send"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_service_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="接收消息："
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_service" />
+
+    <EditText
+        android:id="@+id/edt_service_receive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_client_send"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_service_receive" />
+
+    <TextView
+        android:id="@+id/tv_service_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="响应消息："
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_service_receive" />
+
+    <EditText
+        android:id="@+id/edt_service_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_client_send"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_service_send" />
+
+    <Button
+        android:id="@+id/btn_reply"
+        android:layout_margin="10dp"
+        android:text="回复消息"
+        app:layout_constraintTop_toBottomOf="@id/edt_service_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
